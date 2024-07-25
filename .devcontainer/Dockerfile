@@ -11,7 +11,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive
 # ARG EXTRA_NODE_VERSION=10
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
 
-sudo (cd /tmp; curl -L -o gh.deb https://github.com/cli/cli/releases/download/v2.53.0/gh_2.53.0_linux_amd64.deb; apt install -y ./gh.deb) 
+# Add github-cli to the docker image; Ubuntu is stuck far behind at 2.23, so get the latest.
+RUN sudo (cd /tmp; curl -L -o gh.deb https://github.com/cli/cli/releases/download/v2.53.0/gh_2.53.0_linux_amd64.deb; apt install -y ./gh.deb) 
 
 # [Optional] Uncomment if you want to install more global node modules
  RUN su node -c "npm install -g --slient npm parcel-bundler concurrently eslint prettier"
