@@ -24,7 +24,7 @@
     38500, //SPA App
   ],
   "shutdownAction": "stopCompose",
-  "postStartCommand": "npm install -g npm@latest && npm run init && gh codespace ports visibility 38500:public 35500:public -c $CODESPACE_NAME",
+  "postStartCommand": "npm install -g npm@latest && npm run init", // && gh codespace ports visibility 38500:public 35500:public -c $CODESPACE_NAME",
   "waitFor": "postStartCommand",
   "remoteUser": "node"
 }
