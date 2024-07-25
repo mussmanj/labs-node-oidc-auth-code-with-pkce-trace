@@ -24,7 +24,7 @@
     38500, //SPA App
   ],
   "shutdownAction": "stopCompose",
-  "postStartCommand": "npm install -g npm@latest && npm run init && which gh && ls -l /usr/bin/gh", // && gh --version && gh codespace ports -c $CODESPACE_NAME",
+  "postStartCommand": "npm install -g npm@latest && npm run init && which gh && ls -l /usr/bin/gh && /usr/bin/gh --version", // && gh --version && gh codespace ports -c $CODESPACE_NAME",
   "waitFor": "postStartCommand",
   "remoteUser": "node"
 }
