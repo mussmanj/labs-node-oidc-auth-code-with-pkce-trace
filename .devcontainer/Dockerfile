@@ -16,4 +16,4 @@ RUN curl -L -o /tmp/gh.deb https://github.com/cli/cli/releases/download/v2.53.0/
 RUN apt install -y /tmp/gh.deb
 
 # [Optional] Uncomment if you want to install more global node modules
- RUN su node -c "npm install -g --slient npm parcel-bundler concurrently eslint prettier"
+RUN su node -c "npm install -g --slient npm parcel-bundler concurrently eslint prettier"
